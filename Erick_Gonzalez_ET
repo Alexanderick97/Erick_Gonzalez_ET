@@ -1,0 +1,93 @@
+import os
+import random
+os.system("cls")
+
+trabajadores = {"Juan Perez":[],
+                "María Garcia":[],
+                "Carlos Lopez":[],
+                "Ana Martinez":[],
+                "Pedro Rodriguez":[],
+                "Laura Hernandez":[],
+                "Miguel Sanchez":[],
+                "Isabel Gomez":[],
+                "Francisco Diaz":[],
+                "Elena Fernandez":[]
+                }
+
+lar_Filas = 9
+lar_Columnas = 2
+
+#Sueldos desde 300.000 hasta 2.500.000
+#"numero multiplicados"="nuemero multiplicado"**(1/'Cantidad de numeros')
+
+def Random_Sueldos():
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Ana Martinez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Carlos Lopez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Elena Fernandez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Francisco Diaz"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Isabel Gomez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["María Garcia"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Juan Perez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Laura Hernandez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Miguel Sanchez"].append(sueldo_Aleatorio)
+        sueldo_Aleatorio = random.randint(300000, 2500000)
+        trabajadores["Pedro Rodriguez"].append(sueldo_Aleatorio)
+        print(trabajadores)
+
+def calificacion_Sueldos():
+    input("\n\n\t[Presiona Enter para continuar]")
+
+
+def estadisticas():
+    input("\n\n\t[Presiona Enter para continuar]")
+
+
+try:
+    while True:
+        os.system("cls")
+        print ("\t\t[Bienvenido al programa analizador de datos de trabajadores o ¨P.A.D.T¨]")
+        print ("\t\t\tDigite una de las siguientes opciones")
+        print("\n\tOpcion 1) Asignar sueldos aleatorios\t\tOpcion 2) Clasificar sueldos")
+        print("\tOpcion 3) Ver estadisticas\t\t\tOpcion 4) Reporte de sueldos")
+        print("\tOpcion 5) Salir del programa")
+        opcion = int(input("\t\t\t\t\t[=> <=]\b\b\b\b"))
+        match opcion:
+            case 1: #Asignar Sueldos
+                Random_Sueldos()
+                input("\n\n\t[Presiona Enter para continuar]")
+
+            case 2: #Clasificar sueldos
+                calificacion_Sueldos()
+                input("\n\n\t[Presiona Enter para continuar]")
+
+            case 3: #Ver estadisticas
+                
+                input("\n\n\t[Presiona Enter para continuar]")
+
+            case 4: #Reporte de sueldos
+                input("\n\n\t[Presiona Enter para continuar]")
+
+            case 5:
+                print ("Finalizando programa.....\nDesarrolado por Erick Gonzalez\nRUT: 19.501.024-2")
+                break
+
+            case _:
+                print("opcion no valida")
+                input("\n\n\t[Presiona Enter para continuar]")
+except ValueError:
+    print ("Error Inesperado por valor de datoreintente")
+except SyntaxError:
+    print ("Error inesperado por redaccion de dato reintente")
+except TypeError:
+    print ("Error inesperado por tipo de dato reintente")
+except:
+    print ("Error inesperado reintente")
